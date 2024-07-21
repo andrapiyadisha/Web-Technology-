@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <script>
+            n=parseInt(prompt("Enter a number"))
+            rev = 0;
+            org = n;
+            num=0;
+            while(n!=0){
+                num=n%10;
+                rev=rev*10+num;
+                n=parseInt(n/10);
+            }
+            if(rev ==org){
+                document.write("Palidrome");
+            }else
+                document.write("Not palidrome");
+        </script>
+
+    </body>
+</html>

@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <script>
+           
+           once = ["Zero","One","Two","Three","Four","Five","Six","Seven","Eight","Nine","Ten","Elevan","Twelve","Thirteen","Fourteen","Fifteen","sixteen","Seventeen","Eighteen","Ninteen"];
+           tens = ["Twenty","Thirty","Fourty","Fifty","Sixty","Seventy","Eighty","Ninty"];
+           n = parseInt(prompt("enter a number"));
+           if(n<20){
+            document.write(once[n]);
+           }else if(n<100){
+            a = parseInt(n/10);
+            document.write(tens[a-2]);
+            b = n%10;
+            document.write(once[b]);
+           }else if(n<999){
+            a1 = parseInt(n%100);
+
+            b1 = parseInt(n/100);  
+            document.write(once[b1]+"Hundred");
+            b2 = parseInt(a1/10);
+            if(b2!=0){
+                document.write(tens[b2-2]);
+            }
+            a2 = parseInt(a1%10);  
+            if(a2!=0){
+                document.write(once[a2]);
+            }
+            
+           }
+          
+        </script>
+    </body>
+</html>

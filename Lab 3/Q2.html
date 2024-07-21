@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <tital></tital>
+    </head>
+    <body>
+        <script>
+            n = parseInt(prompt("Enter a number"));
+            a = [n];
+            for(i=0;i<n;i++){
+                a[i] = parseInt(prompt("Enter array"+i));
+            }
+            console.log(a);
+            for(i=0;i<n-1;i++){
+                min = a[i];
+                minIndex = i;
+                for(j=i+1;j<n;j++){
+                  if(min>a[j]){
+                    min = a[j];
+                  minIndex = j;
+                  }  
+                }
+                if(minIndex!=i){
+                a[minIndex] = a[i];
+                a[i] = min;
+            }
+            }
+            for(i=0;i<n;i++){
+                document.write(a[i]);
+            }
+            
+        </script>
+    </body>
+</html>

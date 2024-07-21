@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <script>
+
+            p = [
+                {
+                    Name: "Xyz",
+                    Prize: 10000,
+                    Color: "Red"
+                },
+                {
+                    Name: "Xyz",
+                    Prize: 500000,
+                    Color: "Blue"
+                },
+                {
+                    Name: "Xyz",
+                    Prize: 230000,
+                    Color: "Green"
+                }
+            ];
+            document.write("<table border = '2'>");
+            document.write("<tr>");
+                document.write("<th> Name </th>");
+                document.write("<th> Color </th>");
+                document.write("<th> Prize </th>");
+            document.write("</tr>");
+            for(i=0;i<p.length;i++){
+                document.write("<tr>");
+                 document.write("<td>"+p[i].Name+"</td>");
+                 document.write("<td>"+p[i].Color+"</td>");
+                 document.write("<td>"+p[i].Prize+"</td>");
+                document.write("</tr>");
+            }
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <script>
+            n = parseInt(prompt("enter a number"))
+            sum = 0;
+            temp = n;
+            c = n.toString().length;
+            while(temp>0){
+                num = temp % 10;
+                sum+=Math.pow(num,c);
+                temp = Math.floor(temp/10);
+            }
+            if(sum == n){
+                document.write("True");
+            }else{
+                document.write("false");
+            }
+
+
+        </script>
+    </body>
+</html>

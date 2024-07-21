@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <script>
+            a = [
+                {
+                    Name : "Disha",
+                    Sem : 3
+                },
+                {
+                    Name : "Drashti",
+                    Sem : 5
+                }
+            ];
+             document.write("<table border = '2'>");
+                document.write("<tr>")
+                document.write("<th> Name </th>");
+                document.write("<th> Sem </th>");
+                document.write("</tr>");
+                for(i=0;i<a.length;i++){
+                    document.write("<tr>");
+                        document.write("<td>"+a[i].Name+"</td>");
+                        document.write("<td>"+a[i].Sem+"</td>");
+                    document.write("</tr>");
+                }
+            document.write('</table>');    
+
+        </script>
+    </body>
+</html>

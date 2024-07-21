@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <tital></tital>
+    </head>
+    <body>
+        <script>
+            a=parseInt(prompt("enter a number"))
+            b=parseInt(prompt("enter a number"))
+            for(i=a;i<=b;i++){
+                isPrime = true;
+                for(j=2;j<i;j++){
+                    if(i%j==0){
+                        isPrime = false;
+                        break;
+                    }
+                    }
+                    if(isPrime){
+                        document.write(i);
+                }
+            }
+        </script>
+    </body>
+</html>
