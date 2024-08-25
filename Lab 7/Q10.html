@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <div id="display"></div>
+        <script>
+            message = document.getElementById('display');
+            document.onmousedown = function(event){
+                if(event.button == 0){
+                    document.write('Left Clicked');
+                }
+                else if(event.button == 2){
+                    document.write('Right Clicked');
+                }
+            }
+        </script>
+    </body>
+</html>

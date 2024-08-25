@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <h2>Select Numbers</h2>
+        <div>
+            <input type="checkbox" id="a1" value="1" onclick="display()" />
+            <label>1</label><br>
+            <input type="checkbox" id="a1" value="2" onclick="display()"/>
+            <label>2</label><br>
+            <input type="checkbox" id="a1" value="3" onclick="display()"/>
+            <label>3</label><br>
+            <input type="checkbox" id="a1" value="4" onclick="display()"/>
+            <label>4</label><br>
+            <input type="checkbox" id="a1" value="5" onclick="display()"/>
+            <label>5</label><br>
+        </div>
+        <h2>Selected Numbers are:</h2>
+        <div id="rollNo"></div>
+        <script>
+        
+        function display(){
+            x = document.getElementsByTagName('input');
+            let a = [];
+            for(i=0; i<x.length; i++){
+                if(x[i].type == 'checkbox' && x[i].checked){
+                    a.push(x[i].value);
+                }
+            }
+            document.getElementById('rollNo').innerText = a.join(',');
+         }
+
+        </script>
+    </body>
+</html>
