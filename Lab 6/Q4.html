@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>Q4</title>
+    </head>
+    <body>
+        <form id="myform">
+            <input type="text" name="username" placeholder="Enter username">
+            <input type="password" name="password" placeholder="Enter password">
+            <button type="submit">submit</button>
+        </form>
+    
+        <script>
+            myform.onblur = function(event){
+                myform.style.backgroundColor = 'lightgreen';
+            }
+            myform.onchange = function(event){
+                myform.style.backgroundColor = 'lightblue';
+            }
+            myform.onfocus = function(event){
+                myform.style.backgroundColor = 'purpul';
+            }
+            myform.onreset = function(event){
+                myform.style.backgroundColor = 'lightgray';
+            }
+            myform.onselect = function(event){
+                myform.style.backgroundColor = 'lightcoral';
+            }
+            myform.onsubmit = function(event){
+                myform.style.backgroundColor = 'gray';
+            }
+        </script>
+    </body>
+</html>

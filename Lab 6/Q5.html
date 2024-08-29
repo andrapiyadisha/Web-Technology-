@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Properties of HTML Element</title>
+    <style>
+        #myDiv {
+            width: 200px;
+            height: 100px;
+            border: 2px solid black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="myDiv">Hover over me!</div>
+
+    <script>
+        const myDiv = document.getElementById('myDiv');
+
+        // When the mouse enters the div
+        myDiv.onmouseenter = function(event) {
+            myDiv.textContent = 'Mouse Entered!';
+            myDiv.style.fontSize = '20px';
+            myDiv.style.border = '2px solid blue';
+        }
+
+        // When the mouse leaves the div
+        myDiv.onmouseleave = function(event) {
+            myDiv.textContent = 'Mouse Left!';
+            myDiv.style.fontSize = '16px';
+            myDiv.style.border = '2px solid red';
+        }
+
+        // When the div is clicked
+        myDiv.onclick = function(event) {
+            myDiv.textContent = 'Div Clicked!';
+            myDiv.style.fontSize = '24px';
+            myDiv.style.border = '4px solid green';
+        }
+    </script>
+
+</body>
+</html>

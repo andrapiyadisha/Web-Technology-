@@ -1,0 +1,82 @@
+<html>
+    <head>
+        <title>Calculater</title>
+        <style>
+            body{
+                background-color: black;
+            }
+            table{
+                height: 400px;
+                width: 320px;
+                background-color: black;
+                box-shadow: 0px 0px 5px whitesmoke t;
+            }
+            input{
+                height: 60px;
+                width: 60px;
+                margin-left: 10px;
+            }
+
+            /* .a{
+                padding-bottom: 0%;
+            } */
+        </style>
+    </head>
+    <body>
+        <table border="1" cellspacing="0">
+            <tr  style="height: 60px;">
+                <td colspan="4" id="ans" style="color: white;">
+                </td>
+            </tr>
+            <tr>
+                <td class="a">
+                <input type="button" value="7" onclick="display('7')" id="displayans">
+                <input type="button" value="8" onclick="display('8')" id="displayans">
+                <input type="button" value="9" onclick="display('9')" id="displayans">
+                <input type="button" value="+" onclick="display('+')" id="displayans">
+                </td>
+            </tr>
+            <tr>
+                <td class="a">
+                <input type="button" value="4" onclick="display('4')" id="displayans">
+                <input type="button" value="5" onclick="display('5')" id="displayans">
+                <input type="button" value="6" onclick="display('6')" id="displayans">
+                <input type="button" value="-" onclick="display('-')" id="displayans">
+                </td>
+            </tr>
+            <tr>
+                <td class="a">
+                <input type="button" value="1" onclick="display('1')" id="displayans">
+                <input type="button" value="2" onclick="display('2')" id="displayans">
+                <input type="button" value="3" onclick="display('3')" id="displayans">
+                <input type="button" value="*" onclick="display('*')" id="displayans">
+                </td>
+            </tr>
+            <tr>
+                <td class="a">
+                <input type="button" value="C" onclick="clearAns()">
+                <input type="button" value="0" onclick="display('0')" id="displayans">
+                <input type="button" value="=" onclick="result()">
+                <input type="button" value="/" onclick="display('/')" id="displayans">  
+                </td>
+            </tr>
+            <script>
+                function display(value){
+                n = document.getElementById('ans');
+                n.innerHTML += value;
+                }
+                function clearAns(){
+                    n = document.getElementById('ans');
+                    n.innerHTML = "";  
+                }
+                function result(){
+                    n = document.getElementById('ans');
+                    final = eval(n.innerHTML);
+                    n.innerHTML = final;
+                }
+
+            </script>
+
+        </table>
+    </body>
+</html>

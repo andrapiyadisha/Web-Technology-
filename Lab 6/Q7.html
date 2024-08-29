@@ -1,0 +1,103 @@
+
+<hmtl>
+    <head>
+        <title>CRUDE</title>
+    </head>
+    
+    <body>
+        <div id="form">
+            <input type="text" id="txtID" placeholder="Enter ID" /><br/>
+            <input type="text" id="txtName" placeholder="Enter Name"/><br/>
+            <input type="text" id="txtPhone" placeholder="Enter Phone"/><br/>
+            <br>
+            <button onclick="addStudent()" id="btn">Add</button>
+        
+        </div>
+        <div id="result">
+            output
+        </div>
+
+
+        <script>
+            students= [{
+            Name :'Rajvi',
+            ID: 1 ,
+            Phone: 9638527401
+
+        },
+         {
+            Name :'Drashti',
+            ID: 2 ,
+            Phone: 9925840757
+
+        },
+        {
+            Name :'Disha',
+            ID: 3 ,
+            Phone: 9054361323
+
+        },
+        
+        {
+            Name :'Vritti',
+            ID: 4 ,
+            Phone: 9878273582
+
+        }
+    ]
+        index = -1;
+
+        function displayStudent(){
+            temp=document.getElementById("result");
+            tempString="";
+            tempString += "<table border='1'>";
+
+                for(i=0;i<students.length;i++){
+                    tempString += "<tr>";
+                    tempString += "<td>"+students[i].ID+"</td>";
+                    tempString += "<td>"+students[i].Name+"</td>";
+                    tempString += "<td>"+students[i].Phone+"</td>";
+                    tempString += "<td><button onclick='deleteStudent("+i+")'>Delete</button></td>";
+				    tempString += "<td><button onclick='setStudent("+i+")'>Edit</button></td>";
+				    tempString += "</tr>";
+
+                }
+                tempString += "</table>";
+                temp.innerHTML = tempString;
+        }
+        displayStudent();
+
+        function setStudent(id){
+            index = id;
+            document.getElementById('btn').innerHTML="Edit"
+            document.getElementById('txtName').value=students[id]
+        }
+        function addStudent(){
+            tempStudent = document.getElementById('txtName');
+            tempObj = {
+                ID: document.getElementById('txtID').value,
+                Name: document.getElementById('txtName').value,
+                Phone: document.getElementById('txtPhone').value,
+            }
+            console.log(tempObj);
+				if(index>=0){
+					students[index] = tempObj;
+					index = -1;
+					document.getElementById('btn').innerHTML = "Add";
+				}
+				else{
+					students.push(tempObj);	
+				}
+				
+				tempStudent.value = "";
+				displayStudent();
+			}
+            
+        
+        function deleteStudent(id){
+            students.splice(id,1);
+            displayStudent();
+        }
+        </script>
+    </body>
+</hmtl>

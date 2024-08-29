@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <title>Mouse Event</title>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+        body{
+            height: 100vh;
+            background-color: ;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #div{
+            height: 300px;
+            width: 300px;
+            background-color: rgb(226, 43, 192);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 100px;
+        }
+        </style>
+    </head>
+    <body>
+        <div id="div">
+            Disha
+        </div>
+        <script>
+            const selectEvent = (event) => {
+                div.style.backgroundColor = 'red';
+            }
+            const selectEvent1 = (event) => {
+                div.style.backgroundColor = 'blue';
+            }
+            const selectEvent2 = (event) => {
+                div.style.backgroundColor = 'black';
+            }
+            const selectEvent3 = (event) => {
+                div.style.backgroundColor = 'green';
+            }
+            const selectEvent4 = (event) => {
+                div.style.backgroundColor = 'pink';
+            }
+            const selectEvent5 = (event) => {
+                div.style.backgroundColor = 'orange';
+            }
+            const selectEvent6 = (event) => {
+                div.style.backgroundColor = 'yellow';
+            }
+            div.onclick = selectEvent;
+            div.ondblclick = selectEvent1;
+            div.onmousedown = selectEvent2;
+            div.onmouseup = selectEvent3;
+            div.onmouseover = selectEvent4;
+            div.onmouseout = selectEvent5;
+            div.onmousemove = selectEvent6;
+        </script>
+    </body>
+</html>

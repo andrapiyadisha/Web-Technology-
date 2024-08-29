@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <tital></tital>
+    </head>
+    <body>
+        <h1 onmousemove="displaycol1()" onmouseout="displaycol4()" id="txt">Web Technology</h1>
+        <input type="button" value="timeDate" onclick="display()"/>
+        <input type="button" value="Red" onclick="displaycol2()"/>
+        <input type="button" value="green" onclick="displaycol3()"/>
+
+        <script>
+            function displaycol1(){
+                x = document.getElementById(txt);
+                 document.style.color = "yellow";
+            }
+            function displaycol4(){
+                document.txt.style.color ='';
+            }
+            function displaycol2(){
+                document.body.style.backgroundColor = 'red';
+            }
+            function displaycol3(){
+                document.body.style.backgroundColor = 'green';
+            }
+            function display(){
+                //const currentTime = new Date();
+                alert("date is" + new Date());
+            }
+        </script>
+    </body>
+</html>

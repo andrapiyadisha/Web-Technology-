@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>lab-6 Q-9</title>
+    </head>
+    <body>
+        <input type="tex" onkeypress="display(event)">
+        <div id="ans"></div>
+        <script>
+          function display(e){
+            if(e.key == 'a' || e.key == 'e' || e.key == 'i' || e.key == 'o' || e.key == 'u'){
+                document.getElementById('ans').innerHTML = 'vowel'
+                document.body.style.backgroundColor = 'green';
+            } else {
+                document.getElementById('ans').innerHTML = 'consonat'
+                document.body.style.backgroundColor = '';
+            }
+          }
+
+        </script>
+    </body>
+</html>

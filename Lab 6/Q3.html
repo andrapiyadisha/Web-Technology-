@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>
+            KeyBord Events
+        </title>
+        <style>
+            #key {
+                width: 200px;
+                height: 200px;
+                border: 1px solid black;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        </style>
+    
+    </head>
+    <body>
+        <div id="key" tabindex="0">Press Key</div>
+        <script>
+            const key = document.getElementById('key');
+            key.onkeydown = function(event) {
+                key.style.backgroundColor = 'blue'
+            }
+            key.onkeyup = function(event) {
+                key.style.backgroundColor = 'red'
+            }
+            key.onkeypress = function(event) {
+                key.style.backgroundColor = 'black'
+            }
+        </script>
+    </body>
+</html>
